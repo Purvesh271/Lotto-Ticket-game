@@ -6,6 +6,7 @@ export default function Ui(){
     let [Ticket , setTicket] = useState(genTicket(3));
 
     let win = sum(Ticket)=== 15;
+    let buy = () => {setTicket(genTicket(3))};
 
     return(
         <div>
@@ -15,6 +16,7 @@ export default function Ui(){
                 <span>{Ticket[1]}</span>
                 <span>{Ticket[2]}</span>
             </div>
+            <button onClick={buy}>Buy Ticket</button>
             <h2>{win && "You Won!!"}</h2>
 
         </div>
